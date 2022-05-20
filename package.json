@@ -1,0 +1,38 @@
+{
+    "name": "202205-w02ch05_alejandro-montes",
+    "version": "1.0.0",
+    "description": "Deberás de programar el [Juego de la vida de Conway](https://es.wikipedia.org/wiki/Juego_de_la_vida).",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "jest",
+        "lint": "eslint",
+        "test:watch": "jest --watchAll --collectCoverage",
+        "prepare": "husky install"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/plugin-transform-modules-commonjs": "^7.18.0",
+        "eslint": "^8.15.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-standard": "^17.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-n": "^15.2.0",
+        "eslint-plugin-promise": "^6.0.0",
+        "husky": "^8.0.1",
+        "jest": "^28.1.0"
+    },
+    "prettier": {
+        "singleQuote": true
+    },
+    "babel": {
+        "env": {
+            "test": {
+                "plugins": [
+                    "@babel/plugin-transform-modules-commonjs"
+                ]
+            }
+        }
+    }
+}
