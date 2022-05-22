@@ -1,11 +1,11 @@
-const mapSize = 10;
+const mapSize = 30;
 
-let prebioticBroth = generateMap();
+let prebioticBroth = generateMap(mapSize);
 const prebioticBrothCopy = prebioticBroth.map(function (arr) {
     return arr.slice();
 });
 
-function generateMap() {
+export function generateMap(mapSize) {
     const generatedArr = [];
     for (let i = 0; i < mapSize; i++) {
         generatedArr.push(
@@ -43,7 +43,7 @@ export function checkNeighbours(arr, i, j) {
     // }
     return neighbours;
 }
-function changeMap(arr, arrCopy, i, j) {
+export function changeMap(arr, arrCopy, i, j) {
     const neighbours = checkNeighbours(arr, i, j);
     if (neighbours < 2) {
         arrCopy[i][j] = 0;
@@ -73,4 +73,4 @@ console.log(prebioticBroth);
 
 setInterval(function () {
     runExperiment(prebioticBroth, prebioticBrothCopy);
-}, 3000);
+}, 2000);

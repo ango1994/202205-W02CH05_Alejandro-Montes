@@ -1,4 +1,4 @@
-import { checkNeighbours } from './app';
+import { checkNeighbours, generateMap } from './app';
 
 const arr = [
     [1, 1, 1, 1, 1],
@@ -79,6 +79,16 @@ describe('Given the function checkNeighbours', () => {
             const j = 2;
             const expectedResult = checkNeighbours(arr, i, j);
             expect(expectedResult).toBe(8);
+        });
+    });
+});
+
+describe('Given the function generateMap', () => {
+    describe('When it receives the parameter mapSize', () => {
+        test('Then it should return an array', () => {
+            const mapSize = 5;
+            const expectedResultGenerateMap = generateMap(mapSize);
+            expect(typeof expectedResultGenerateMap).toBe('object');
         });
     });
 });
